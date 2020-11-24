@@ -52,4 +52,14 @@ public class Enemy {
         }
     }
 
+    public String getName(){
+         return this.name;
+     }
+
+     public int getHitPoint(){
+         return this.hitPoint;
+     }
+
+     public boolean getDead(){
+         return this.dead;
 }
