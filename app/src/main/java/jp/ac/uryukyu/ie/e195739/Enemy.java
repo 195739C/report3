@@ -36,7 +36,7 @@ public class Enemy {
     public void attack(Hero hero){
         if(this.hitPoint > 0){
              int damage = (int)(Math.random() * attack);
-             System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
+             System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.getname, damage);
              hero.wounded(damage);
          }
     }
@@ -65,4 +65,5 @@ public class Enemy {
      public boolean getDead(){
          return this.dead;
      }
+    
 }
