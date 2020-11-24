@@ -35,7 +35,7 @@ public class Hero {
      */
     public void attack(Enemy e){
         int damage = (int)(Math.random() * attack);
-        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.name, damage);
+        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getName, damage);
         e.wounded(damage);
     }
 
@@ -50,5 +50,17 @@ public class Hero {
             dead = true;
             System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", name);
         }
+    }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    public int getHitPoint(){
+        return this.hitPoint;
+    }
+    
+    public boolean getDead(){
+        return this.dead;
     }
 }
